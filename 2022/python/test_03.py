@@ -1,7 +1,6 @@
 import unittest
 from functools import reduce
 from itertools import groupby
-
 from aoc_helpers import input_lines, example_lines
 
 
@@ -30,13 +29,13 @@ def part2(lns: list[str]) -> int:
 
 class Day03(unittest.TestCase):
     def test_part1_example(self):
-        self.assertEqual(part1(example_lines(day=3)), 157)
+        self.assertEqual(157, part1(example_lines(day=3)))
 
     def test_part2_example(self):
-        self.assertEqual(part2(example_lines(day=3)), 70)
+        self.assertEqual(70, part2(example_lines(day=3)))
 
     def test_part1_solution(self):
-        self.assertEqual(part1(input_lines(day=3)), 7824)
+        self.assertEqual(7824, part1(input_lines(day=3)))
 
     def test_part2_solution(self):
-        self.assertEqual(part2(input_lines(day=3)), 2798)
+        self.assertEqual(2798, part2(input_lines(day=3)))

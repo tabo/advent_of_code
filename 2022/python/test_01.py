@@ -19,13 +19,13 @@ def part2(txt: str):
 
 class Day01(unittest.TestCase):
     def test_part1_example(self):
-        self.assertEqual(part1(example_text(day=1)), 24000)
+        self.assertEqual(24000, part1(example_text(day=1)))
 
     def test_part2_example(self):
-        self.assertEqual(part2(example_text(day=1)), 45000)
+        self.assertEqual(45000, part2(example_text(day=1)))
 
     def test_part1_solution(self):
-        self.assertEqual(part1(input_text(day=1)), 74394)
+        self.assertEqual(74394, part1(input_text(day=1)))
 
     def test_part2_solution(self):
-        self.assertEqual(part2(input_text(day=1)), 212836)
+        self.assertEqual(212836, part2(input_text(day=1)))

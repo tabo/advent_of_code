@@ -44,13 +44,13 @@ def part2(lns):
 
 class Day02(unittest.TestCase):
     def test_part1_example(self):
-        self.assertEqual(part1(example_lines(day=2)), 15)
+        self.assertEqual(15, part1(example_lines(day=2)))
 
     def test_part2_example(self):
-        self.assertEqual(part2(example_lines(day=2)), 12)
+        self.assertEqual(12, part2(example_lines(day=2)))
 
     def test_part1_solution(self):
-        self.assertEqual(part1(input_lines(day=2)), 13221)
+        self.assertEqual(13221, part1(input_lines(day=2)))
 
     def test_part2_solution(self):
-        self.assertEqual(part2(input_lines(day=2)), 13131)
+        self.assertEqual(13131, part2(input_lines(day=2)))
