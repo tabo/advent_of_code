@@ -2,7 +2,7 @@ from pathlib import Path
 
 
 def get_file_text(prefix: str, day: int) -> str:
-    return Path(f"../input/{prefix}{day:02}.txt").read_text()
+    return (Path(__file__).resolve().parent.parent / "input" / f"{prefix}{day:02}.txt").read_text()
 
 
 def example_text(day: int) -> str:
