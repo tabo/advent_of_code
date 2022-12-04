@@ -2,7 +2,7 @@ import unittest
 from aoc_helpers import input_lines, example_lines
 
 
-def part1(lns):
+def part1(lns) -> int:
     scores: dict[str, int] = {
         # 1st col opponent play: A=rocks B=paper C=scissors
         # 2nd col out play:      X=rocks Y=paper Z=scissors
@@ -22,7 +22,7 @@ def part1(lns):
     return sum(scores[ln] for ln in lns)
 
 
-def part2(lns):
+def part2(lns) -> int:
     scores: dict[str, int] = {
         # 1st col opponent play:   A=rocks B=paper C=scissors
         # 2nd col expected result: X=defeat Y=draw Z=victory

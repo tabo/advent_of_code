@@ -9,11 +9,11 @@ def groups(txt: str) -> list[int]:
     ]
 
 
-def part1(txt: str):
+def part1(txt: str) -> int:
     return max(groups(txt))
 
 
-def part2(txt: str):
+def part2(txt: str) -> int:
     return sum(sorted(groups(txt))[-3:])
 
 

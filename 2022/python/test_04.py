@@ -2,17 +2,21 @@ import unittest
 from aoc_helpers import input_lines, example_lines
 
 
-def rangeset(s: str) -> set[int]:
+IntsSet = set[int]
+PairOfIntsSets = tuple[IntsSet, IntsSet]
+
+
+def rangeset(s: str) -> IntsSet:
     n1, n2 = s.split("-")
     return set(range(int(n1), int(n2) + 1))
 
 
-def pair_of_number_sets(ln: str) -> tuple[set[int], set[int]]:
+def pair_of_number_sets(ln: str) -> PairOfIntsSets:
     p1, p2 = ln.split(",")
     return rangeset(p1), rangeset(p2)
 
 
-def lines_to_pairs(lns: list[str]) -> list[tuple[set[int], set[int]]]:
+def lines_to_pairs(lns: list[str]) -> list[PairOfIntsSets]:
     return [pair_of_number_sets(ln) for ln in lns]
 
 
