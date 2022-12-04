@@ -12,7 +12,7 @@ def pair_of_number_sets(ln: str) -> tuple[set[int], set[int]]:
     return rangeset(p1), rangeset(p2)
 
 
-def lines_to_pairs(lns: list[str]) -> iter[tuple[set[int], set[int]]]:
+def lines_to_pairs(lns: list[str]) -> list[tuple[set[int], set[int]]]:
     return [pair_of_number_sets(ln) for ln in lns]
 
 

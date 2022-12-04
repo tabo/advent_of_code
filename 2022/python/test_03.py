@@ -5,11 +5,10 @@ from aoc_helpers import input_lines, example_lines
 
 
 def char_score(char: str) -> int:
-    ascii_chr = ord(char)
-    if ord("a") <= ascii_chr <= ord("z"):
-        return ascii_chr - ord("a") + 1
-    if ord("A") <= ascii_chr <= ord("Z"):
-        return ascii_chr - ord("A") + 27
+    if "a" <= char <= "z":
+        return ord(char) - ord("a") + 1
+    if "A" <= char <= "Z":
+        return ord(char) - ord("A") + 27
     return 0
 
 
