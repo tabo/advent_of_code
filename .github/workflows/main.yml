@@ -1,6 +1,6 @@
 ﻿name Advent of Code
 
-on: [push]
+on: push
 
 jobs:
   2022_python:
