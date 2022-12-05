@@ -3,7 +3,7 @@
 on: push
 
 jobs:
-  2022_python:
+  python2022:
     name: Advent of Code 2022 - Python
     runs-on: ubuntu-latest
     steps:
