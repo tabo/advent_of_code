@@ -1,0 +1,16 @@
+﻿name Advent of Code
+
+on: [push]
+
+jobs:
+  2022_python:
+    name: Advent of Code 2022 - Python
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Run tests
+        working-directory: ./2022/python/
+        run: python -m unittest
