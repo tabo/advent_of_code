@@ -4,15 +4,18 @@ from collections import defaultdict
 from aoc_helpers import input_lines, example_lines
 
 
-def pwd_list_to_pwd(lst):
+FsType = dict[str, int]
+
+
+def pwd_list_to_pwd(lst: list[str]) -> str:
     if len(lst) == 1:
         return "/"
     return "/".join(lst)
 
 
-def build_fs(lns):
-    fs = defaultdict(int)
-    pwd = [""]
+def build_fs(lns: list[str]) -> FsType:
+    fs: FsType = defaultdict(int)
+    pwd: list[str] = [""]
     for ln in lns:
         if ln == "$ ls":
             pass
@@ -26,7 +29,7 @@ def build_fs(lns):
             pass
         else:
             size_str, fname = ln.split(" ", 1)
-            size = int(size_str)
+            size: int = int(size_str)
             for pos in range(len(pwd)):
                 fs[pwd_list_to_pwd(pwd[0 : pos + 1])] += size
     return fs
@@ -39,8 +42,8 @@ def part1(lns: list[str]) -> int:
 
 
 def part2(lns: list[str]) -> int:
-    fs = build_fs(lns)
-    used_space = fs["/"]
+    fs: FsType = build_fs(lns)
+    used_space: int = fs["/"]
     return min(size for size in fs.values() if 40000000 + size >= used_space)
 
 
